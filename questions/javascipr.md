@@ -236,7 +236,9 @@ while (num<500){
 
 `Web Storage`的概念和`cookie`相似，区别是它是为了更大容量存储设计的。
 
-`Cookie`的大小是受限的，并且每次你请求一个新的页面的时候`Cookie`都会被发送过去，这样无形中浪费了带宽，另外`cookie`还需要指定作用域，不可以跨域调用。
+`Cookie`的大小是受限的，`cookie`的数据大小不超过4KB，因为考虑到每一个HTTP请求头中都要携带，所以精简一些。并且每次你请求一个新的页面的时候`Cookie`都会被发送过去，这样无形中浪费了带宽，另外`cookie`还需要指定作用域，不可以跨域调用。
+
+`Web Storage`因为子域存储空间独立，存储大小更大，可以达到5MB，目前接替了`Cookie`管理需要比较多数据的工作，例如：网游购物车。
 
 除此之外，`Web Storage`拥有`setItem`,`getItem`,`removeItem`,`clear`等方法，不像`cookie`需要前端开发者自己封装`setCookie`，`getCookie`。
 
@@ -252,7 +254,7 @@ while (num<500){
 
 `Object` 是 `JavaScript` 中所有对象的父对象  
 
-数据封装类对象：`Object`、`Array`、`Boolean`、Number` 和 `String`    
+数据封装类对象：`Object`、`Array`、`Boolean`、`Number` 和 `String`    
 
 其他对象：`Function`、`Arguments`、`Math`、`Date`、`RegEx`、`Error`
 
